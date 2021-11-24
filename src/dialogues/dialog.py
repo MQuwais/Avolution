@@ -3,15 +3,18 @@
 ###
 
 from system.clear import *
+from system.delete_all_pycache import *
 import sys
 import time
 
 from src.dialogues.malbate.hacking import *
+from arm.banner import *
 
 class Dialog:
     def first():
         while True:
             Clear()
+            Banner()
             print("""
 What do you think You gonna do?
    1. Start Hacking
@@ -29,6 +32,7 @@ What do you think You gonna do?
     def second():
         while True:
             Clear()
+            Banner()
             print("""
 Hack What?
    1. Facebook
@@ -42,3 +46,4 @@ Hack What?
             else:
                 print("[!] Wrong input")
                 time.sleep(2)
+

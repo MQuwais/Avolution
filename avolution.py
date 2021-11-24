@@ -10,6 +10,7 @@ from src.dialogues.dialog import *
 from src.dialogues.malbate.hacking import *
 from exploit.xploit import *
 from payload.facebook.phising.inject import *
+from arm.banner import *
 
 try:
     Dialog.first()

